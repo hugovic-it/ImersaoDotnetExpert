@@ -10,8 +10,9 @@ namespace DevFreela.API.Controllers
     public class ProjectsController : ControllerBase
     {
         public readonly OpeningTimeOption _option;
-        public ProjectsController(IOptions<OpeningTimeOption> option)
+        public ProjectsController(IOptions<OpeningTimeOption> option, ExampleClass exampleClass)
         {
+            exampleClass.Name = "Update at ProjectsController";
             _option = option.Value;
         }
         // api/projects?query=netcore

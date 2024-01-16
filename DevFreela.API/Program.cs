@@ -15,7 +15,7 @@ var Configuration = new ConfigurationBuilder()
 
 // codigo curso:
 builder.Services.Configure<OpeningTimeOption>(Configuration.GetSection("OpeningTime"));
-
+builder.Services.AddSingleton<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" });
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
